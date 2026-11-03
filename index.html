@@ -2,160 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Leaf – an RSS reader where the news turns like a page</title>
-  <meta name="description" content="Leaf is an RSS reader for iPhone, iPad and iPhone Duo. Every story is a page you turn like a newspaper. Follow your own sources, sync through iCloud, no accounts and no tracking.">
-  <meta name="theme-color" content="#b82e3d">
+  <meta name="description" content="Leaf is an RSS reader for iPhone, iPad and iPhone Duo where every story is a page and the page curls over like paper. iCloud sync, a widget, a morning edition, no accounts and no tracking.">
+  <meta name="theme-color" content="#14080b">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta property="og:title" content="Leaf">
-  <meta property="og:description" content="An RSS reader for iPhone, iPad and iPhone Duo where every story is a page you turn like a newspaper.">
+  <meta property="og:description" content="The news, one page at a time. An RSS reader for iPhone, iPad and iPhone Duo.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://idrewn.github.io/leaf-site/">
   <meta property="og:image" content="https://idrewn.github.io/leaf-site/assets/og.jpg">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="motion.css">
+  <link rel="stylesheet" href="theme.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="./"><img src="assets/favicon.png" alt="" width="28" height="28">Leaf</a>
-    <nav aria-label="Main"><a href="#how">How it works</a><a href="#features">Features</a><a href="#plus">Leaf Plus</a><a href="privacy.html">Privacy</a><a href="support.html">Support</a></nav>
-  </div>
-</header>
-
+<div class="ambient" aria-hidden="true"></div>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="./"><img src="assets/icon.png" alt="" width="24" height="24">Leaf</a>
+  <ul><li><a href="#pages">Pages</a></li><li><a href="#sources">Sources</a></li><li><a href="#details">Details</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="support.html">Support</a></li></ul>
+  <a class="buy" href="https://testflight.apple.com/join/WN9FSDAE">Join the beta</a>
+</div></header>
 <main>
-  <div class="wrap hero">
-    <img class="icon" src="assets/icon.png" alt="The Leaf app icon: a serif L on crimson with a turned page corner" width="120" height="120">
-    <hr class="rule">
-    <h1>Leaf</h1>
-    <p class="lead">The news, one page at a time. Follow the sources you choose and turn each story like a page in a newspaper. Made for iPhone, iPad and iPhone Duo.</p>
-    <p style="margin:0 0 14px;"><a class="button" href="https://testflight.apple.com/join/WN9FSDAE" rel="noopener">Join the beta on TestFlight</a></p>
-    <span class="badge">In TestFlight beta &middot; iOS 26 or later</span>
-    <div class="showcase">
-      <figure class="duo" style="margin:0"><img src="assets/screen-duo-curl.jpg" alt="Leaf on the inner display of an iPhone Duo: two pages side by side, with a third page curling over like paper" width="1600" height="1125"></figure>
+<section class="stage hero" id="top" style="--n:3.3" data-stage data-bg="#14080b" data-glow="214,58,78">
+  <div class="pin">
+    <div class="hero-copy" data-beat="-1,-0.5,0.2,0.46" data-travel="-110">
+      <p class="eyebrow">RSS reader · iPhone · iPad · iPhone Duo</p>
+      <h1>Leaf.<br><span class="grad">The news, one page at a time.</span></h1>
+      <p class="lead">Follow the sources you choose and turn each story like a page in a newspaper.</p>
+      <div class="cta"><a class="pill fill" href="https://testflight.apple.com/join/WN9FSDAE">Join the beta</a><a class="pill line" href="#pages">See how it turns</a></div>
     </div>
-    <p class="caption">A page turning in Leaf on an iPhone Duo, in the Xcode simulator. The headlines belong to the publishers.</p>
+    <p class="hero-tag" data-beat="0.42,0.62,2,3" data-travel="50">Turn the page.<br><span class="grad">Not the scroll.</span></p>
+    <div class="fan"><div class="device" data-motion="fan" data-i="0" data-n="2"><img src="assets/phone-sources.png" alt="Leaf: choosing sources" width="1306" height="2360" loading=eager></div><div class="device" data-motion="fan" data-i="1" data-n="2"><img src="assets/phone-iphone.png" alt="Leaf: a story as a page" width="1306" height="2360"></div></div>
   </div>
-
-  <section id="how">
-    <div class="wrap">
-      <h2>Three steps. Then turn the page.</h2>
-      <p class="sub">There is nothing to sign up for.</p>
-      <ol class="steps">
-        <li><strong>Pick your sources</strong><span>Leaf suggests popular ones for your country, sorted by section. Or paste any feed or website address.</span></li>
-        <li><strong>Turn the pages</strong><span>Each story is a page. Swipe and it curls over like paper. On iPhone Duo and iPad you see two pages at once.</span></li>
-        <li><strong>Read on</strong><span>Tap Read full story to open the article in Reader view. Leaf remembers which page you were on.</span></li>
-      </ol>
-    </div>
-  </section>
-
-  <section id="features">
-    <div class="wrap">
-      <h2>A newspaper that is yours</h2>
-      <p class="sub">The sources are your own and the front page is made fresh each time.</p>
-      <div class="grid">
-        <div class="card"><h3>Pages that turn</h3>
-          <p>No endless scroll. A story is a page, the next story is the next page, and turning it feels like paper.</p></div>
-        <div class="card"><h3>Made for iPhone Duo</h3>
-          <p>Open the Duo and the pages sit side by side with the spine in the crease. Fold it part way and the stories keep clear of the fold.</p></div>
-        <div class="card"><h3>Sources for where you live</h3>
-          <p>Suggested feeds follow your device's country: Sweden first, then Norway, Denmark, Finland, Germany, France, Spain, the UK, the US and a global list.</p></div>
-        <div class="card"><h3>Your own feeds</h3>
-          <p>Paste a feed or a website address and Leaf finds the feed. Bring your list from another reader with an OPML file, or take it with you.</p></div>
-        <div class="card"><h3>Where you left off</h3>
-          <p>Your sources, saved stories and reading place sync between your devices through iCloud, and are in your iCloud backup, so a new phone picks up on the same page.</p></div>
-        <div class="card"><h3>Read it your way</h3>
-          <p>Search, jump from the table of contents, show only unread stories, and choose typeface, text size and a paper or sepia background.</p></div>
-        <div class="card"><h3>A widget for the front page</h3>
-          <p>The latest headlines on your Home Screen and Lock Screen. Tap one to open that page.</p></div>
-        <div class="card"><h3>Private by design</h3>
-          <p>No accounts, no ads, no analytics and no servers of mine. <a href="privacy.html">Read the privacy policy</a>.</p></div>
-        <div class="card"><h3>English and Swedish</h3>
-          <p>Leaf follows your language: <em>Your morning edition</em> becomes <em>Din morgonupplaga</em>.</p></div>
-      </div>
-      <div class="showcase">
-        <figure class="phone" style="margin:0"><img src="assets/screen-iphone.jpg" alt="Leaf on an iPhone: one story as a page, with a serif headline, a short summary and a Read full story button" width="736" height="1600"></figure>
-        <figure class="phone" style="margin:0"><img src="assets/screen-iphone-sources.jpg" alt="Leaf's Sources screen on an iPhone, with sources sorted into sections" width="736" height="1600"></figure>
-      </div>
-      <p class="caption" style="text-align:center">Leaf on an iPhone 18 Pro Max, in the Xcode simulator.</p>
-    </div>
-  </section>
-
-  <section id="plus">
-    <div class="wrap">
-      <h2>Free to read. Plus to go further.</h2>
-      <p class="sub">Leaf is free to download and the reader is the same for everyone. Leaf Plus is an optional subscription, monthly or yearly, that you can cancel any time in your Apple ID settings.</p>
-      <div class="plans">
-        <div class="plan">
-          <h3>Leaf</h3>
-          <p class="price">Free</p>
-          <ul>
-            <li>Page-turning reader, with two pages on iPhone Duo and iPad</li>
-            <li>Up to 5 sources, from the suggestions or your own</li>
-            <li>iCloud sync and backup</li>
-            <li>Search, unread only, widget and reading settings</li>
-            <li>Import and export your sources (OPML)</li>
-          </ul>
-        </div>
-        <div class="plan plus">
-          <h3>Leaf Plus</h3>
-          <p class="price">Optional subscription</p>
-          <ul>
-            <li>As many sources as you like</li>
-            <li>Notifications from the sources you pick</li>
-            <li>A morning edition at the time you choose</li>
-            <li>Save stories to read later</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="details">
-    <div class="wrap">
-      <h2>The details</h2>
-      <p class="sub">What is in the app today.</p>
-      <div class="facts">
-        <div>
-          <h3>Reading</h3>
-          <ul>
-            <li>RSS 2.0, RSS 1.0 and Atom feeds</li>
-            <li>Sections: top news, domestic, world, business, technology, sport, culture, science, local</li>
-            <li>Full articles open in the system's Reader view</li>
-            <li>Your page is remembered, also across devices</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Notifications</h3>
-          <ul>
-            <li>Made on your device, with no push server</li>
-            <li>iOS decides when Leaf can check for news, so alerts can arrive some time after a story is published</li>
-            <li>Quiet hours for story notifications</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Requirements</h3>
-          <ul>
-            <li>iPhone or iPad with iOS 26 or later</li>
-            <li>iPhone Duo: the fold-aware layout needs iOS 27.1</li>
-            <li>English and Swedish</li>
-          </ul>
-        </div>
-      </div>
-      <p style="margin-top:32px;">
-        <a class="button" href="https://testflight.apple.com/join/WN9FSDAE" rel="noopener">Join the beta</a>
-        <a class="button secondary" href="support.html">Get support</a>
-        <a class="button secondary" href="privacy.html">Privacy policy</a>
-      </p>
-    </div>
-  </section>
-</main>
-
-<footer>
+</section>
+<section class="stage" id="pages" style="--n:3.15" data-stage data-bg="#1a0a0e" data-glow="214,58,78">
+  <i class="mark" aria-hidden="true" data-bg="#1a0a0e" data-glow="214,58,78" style="position:absolute;left:0;top:32.94%;width:1px;height:1px"></i>
+<i class="mark" aria-hidden="true" data-bg="#1c0d12" data-glow="230,90,120" style="position:absolute;left:0;top:67.06%;width:1px;height:1px"></i>
+  <div class="pin split">
+    <div class="copy"><div class="beat" data-beat="-1.000,-0.500,0.450,0.550">
+        <p class="eyebrow">Pages that turn</p>
+        <h2>A story is a page.</h2>
+        <p>No endless scroll. A story is a page, the next story is the next page, and turning it feels like paper.</p>
+      </div><div class="beat" data-beat="0.450,0.550,2.000,3.000">
+        <p class="eyebrow">iPhone Duo</p>
+        <h2>Two pages. One spine.</h2>
+        <p>Open the Duo and the pages sit side by side with the spine in the crease. Fold it part way and the stories keep clear of the fold.</p>
+      </div></div>
+    <div class="devwrap"><div class="device wide" data-motion="wide" style="aspect-ratio:1600/1125"><img data-beat="-1.000,-0.500,0.440,0.560" src="assets/duo-curl.jpg" alt="A page curling over in Leaf on an iPhone Duo" loading="lazy" width=1600 height=1125><img data-beat="0.440,0.560,2.000,3.000" src="assets/duo.jpg" alt="Leaf on an iPhone Duo with two pages" loading="lazy" width=1600 height=1125></div></div>
+  </div>
+</section>
+<section class="stage" id="sources" style="--n:3.15" data-stage data-bg="#17090c" data-glow="255,138,110">
+  <i class="mark" aria-hidden="true" data-bg="#17090c" data-glow="255,138,110" style="position:absolute;left:0;top:32.94%;width:1px;height:1px"></i>
+<i class="mark" aria-hidden="true" data-bg="#1f0c0f" data-glow="214,58,78" style="position:absolute;left:0;top:67.06%;width:1px;height:1px"></i>
+  <div class="pin split flip">
+    <div class="copy"><div class="beat" data-beat="-1.000,-0.500,0.450,0.550">
+        <p class="eyebrow">Sources</p>
+        <h2>Your sources. Your front page.</h2>
+        <p>Suggested feeds follow your device&rsquo;s country, sorted by section. Or paste any feed or website address and Leaf finds the feed.</p>
+      </div><div class="beat" data-beat="0.450,0.550,2.000,3.000">
+        <p class="eyebrow">Reading</p>
+        <h2>Read it your way.</h2>
+        <p>Search, jump from the table of contents, show only unread stories, and choose typeface, text size and a paper or sepia background.</p>
+      </div></div>
+    <div class="devwrap"><div class="device" data-motion="sway"><img data-beat="-1.000,-0.500,0.440,0.560" src="assets/phone-sources.png" alt="Choosing sources" loading="lazy" width=1306 height=2360><img data-beat="0.440,0.560,2.000,3.000" src="assets/phone-iphone.png" alt="A story in Leaf" loading="lazy" width=1306 height=2360></div></div>
+  </div>
+</section>
+<section class="stage numbers" style="--n:2.6" data-stage data-bg="#1a0b12" data-glow="200,60,140">
+  <div class="pin"><div class="row" data-zoom><div><div class="n grad" data-count="5" data-pre="" data-suf="">0</div><div class="l">free sources</div></div><div><div class="n grad" data-count="2" data-pre="" data-suf="">0</div><div class="l">pages on iPhone Duo</div></div><div><div class="n grad" data-count="0" data-pre="" data-suf="">0</div><div class="l">accounts</div></div></div><p class="sentence">Free to read. Leaf Plus is optional. No accounts, no ads and no analytics.</p></div>
+</section>
+<section class="block center" id="details" data-bg="#14080b" data-glow="214,58,78">
   <div class="wrap">
-    <p>&copy; 2026 Anders Johansson. Leaf is made by <a href="https://github.com/iDrewn">Anders Johansson</a>.</p>
-    <p>iPhone, iPad and iPhone Duo are trademarks of Apple Inc. Leaf is an independent app and is not affiliated with or endorsed by Apple. News headlines and pictures shown in Leaf belong to their publishers.</p>
+    <p class="eyebrow" data-reveal>Details</p>
+    <h2 data-reveal>A newspaper that is yours.</h2>
+    <p class="lead" data-reveal>The sources are your own and the front page is made fresh each time.</p>
+    <div class="bento"><div class="tile w4 hot" data-reveal><span class="k">iCloud</span><h3>Where you left off.</h3><p>Your sources, saved stories and reading place sync between your devices through iCloud, and are in your iCloud backup, so a new phone picks up on the same page.</p></div><div class="tile " data-reveal><span class="k">Widget</span><h3>The front page, on your Home Screen.</h3><p>The latest headlines on your Home Screen and Lock Screen. Tap one to open that page.</p></div><div class="tile " data-reveal><span class="k">Your feeds</span><h3>Bring your list.</h3><p>Paste a feed or a website address, or move your list with an OPML file.</p></div><div class="tile " data-reveal><span class="k">Local</span><h3>Sources for where you live.</h3><p>Suggested feeds follow your country: Sweden first, then Norway, Denmark, Finland, Germany, France, Spain, the UK, the US and a global list.</p></div><div class="tile w3" data-reveal><span class="k">Plus</span><h3>Free to read. Plus to go further.</h3><p>Leaf Plus is an optional subscription, monthly or yearly: as many sources as you like, notifications from the sources you pick, a morning edition and saved stories. Cancel any time in your Apple ID settings.</p></div><div class="tile w3" data-reveal><span class="k">Private</span><h3>Private by design.</h3><p>No accounts, no ads, no analytics and no servers of mine. Notifications are made on your device. <a href="privacy.html">Read the privacy policy</a>.</p></div></div>
   </div>
-</footer>
+</section>
+<section class="cta-block" id="get" data-bg="#14080b" data-glow="214,58,78">
+  <div class="wrap">
+    <img class="icon" src="assets/icon.png" alt="Leaf app icon" width="132" height="132" data-reveal>
+    <h2 data-reveal>Get Leaf.</h2>
+    <p class="lead" data-reveal>In TestFlight beta now. For iPhone and iPad with iOS 26 or later, in English and Swedish. The fold-aware iPhone Duo layout needs iOS 27.1.</p>
+    <div class="cta" data-reveal><a class="pill fill" href="https://testflight.apple.com/join/WN9FSDAE">Join the beta</a><a class="pill line" href="support.html">Support</a></div>
+    
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><p>&copy; 2026 Anders Johansson. Leaf is made by <a href="https://github.com/iDrewn">Anders Johansson</a>.</p>
+    <p>iPhone, iPad and iPhone Duo are trademarks of Apple Inc. Leaf is an independent app and is not affiliated with or endorsed by Apple. News headlines and pictures shown in Leaf belong to their publishers.</p></div></footer>
+<script src="motion.js" defer></script>
 </body>
 </html>
